@@ -1,6 +1,6 @@
 <header class="site-header">
   <a class="site-title" href="/">
-    <img src="/images/viniciusdacal.jpg" class="title-picture">
+    <img src="/images/author.jpg" class="title-picture">
     <div class="titles-wrapper">
       <div class="title">{{ config.title }}</div>
       <div class="subtitle">{{ config.jobtitle }}</div>
@@ -15,12 +15,11 @@
           <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
         </svg>
       </a>
-      {{ config.metadata }}
       <div class="trigger">
-          <a class="page-link active" href="{% if page.lang == config.i18n.default %}/{% else %}/{{ page.lang }}{% endif %}">Home</a>
-          {% for page in pages %}
+        <a class="page-link active" href="{% if page.lang == config.i18n.default %}/{% else %}/{{ page.lang }}{% endif %}">Home</a>
+        {% for page in pages %}
           <a class="page-link" href="{{ page.link }}">{{ page.title }}</a>
-          {% endfor %}
+        {% endfor %}
       </div>
     </nav>
     <div class="language-menu">
