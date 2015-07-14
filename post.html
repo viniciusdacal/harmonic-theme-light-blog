@@ -1,0 +1,24 @@
+<html>
+{% include "./partials/head.html" %}
+<body>
+    {% include "./partials/header.html" %}
+    <section class="page-content">
+        <div class="wrapper">
+            <div class="post">
+                <header class="post-header">
+                    <h1 class="post-title">{{ post.metadata.title }}</h1>
+                    {% if post.lang == "en" %}
+                      {{ config.months['en'][post.metadata.date.getMonth()]+' '+post.metadata.date.getDate()+', '+ post.metadata.date.getFullYear() }}
+                    {% else %}
+                        {{ post.metadata.date.getDate() +' de '+ config.months['pt-br'][post.metadata.date.getMonth()] +' de '+ post.metadata.date.getFullYear() }}
+                    {% endif %}
+                </header>
+                <article class="post-content">
+                {{ post.content }}
+                </article>
+            </div>
+        </div>
+    </section>
+    {% include "./partials/footer.html" %}
+</body>
+</html>

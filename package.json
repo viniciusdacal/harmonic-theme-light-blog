@@ -1,0 +1,22 @@
+{
+  "name": "harmonic-theme-light-blog",
+  "version": "2.1.0",
+  "description": "Harmonic theme",
+  "keywords": [
+    "harmonictheme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusdacal/harmonic-theme-light-blog.git"
+  },
+  "author": {
+    "name": "Vinicius Dacal"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viniciusdacal/harmonic-theme-light-blog/issues"
+  },
+  "homepage": "https://github.com/viniciusdacal/harmonic-theme-light-blog",
+  "directories": {},
+  "readme": "ERROR: No README data found!"
+}

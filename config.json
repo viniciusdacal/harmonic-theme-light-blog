@@ -1,0 +1,37 @@
+{
+	"preprocessor": false,
+	"disqus": {
+		"disqus_shortname": "viniciusdacalcom",
+		"disqus_language": "pt_BR"
+	},
+	"months": {
+		"pt-br":[
+			"Janeiro",
+			"Fevereiro",
+			"Março",
+			"Abril",
+			"Maio",
+			"Junho",
+			"Julho",
+			"Agosto",
+			"Setembro",
+			"Outubro",
+			"Novembro",
+			"Dezembro"
+		],
+		"en": [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+		  	"July",
+		  	"August",
+		  	"September",
+		  	"October",
+		  	"November",
+		  	"December"
+		]
+	}
+}

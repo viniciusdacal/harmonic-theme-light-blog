@@ -1,0 +1,35 @@
+<head dir="ltr" lang="{{page.metalang}}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% if post.title %}
+          {{ post.title }}
+        {% else %}
+          {{ config.title }}
+        {% endif %}
+    </title>
+    <meta
+    name="description"
+    content="{% if post.metadata.content %}{{ post.metadata.content }}{% else %}{{ config.description }}{% endif %}">
+
+    <meta name="keywords" content="{{config.mainKeywords}}">
+    <meta property="og:site_name" content="{{config.name}}"/>
+    <meta property="og:title" content="{% if post.title %}{{ post.title }}{% else %}{{ config.title }}{% endif %}" />
+    <meta property="og:url" content="{{ config.domain }}" />
+    <meta property="fb:app_id" content="684221391686656" />
+    <meta
+    property="og:description"
+    content="{% if post.metadata.content %}{{ post.metadata.content }}{% else %}{{ config.description }}{% endif %}" />
+    <meta property="article:author" content="{{site.facebook}}" />
+    <meta property="og:image" content="/resources/assets/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:type" content="article" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="{{ config.domain }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ config.domain }}/feed.xml" />
+</head>

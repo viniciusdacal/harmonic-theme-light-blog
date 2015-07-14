@@ -1,0 +1,30 @@
+<html>
+{% include "./partials/head.html" %}
+<body>
+    {% include "./partials/header.html" %}
+    <section class="home">
+        <ul class="post-list">
+            {% for post in posts %}
+            <li>
+                <article class="wrapper">
+                    <span class="post-meta">
+                    {% if post.lang == "en" %}
+                      {{ config.months['en'][post.date.getMonth()]+' '+post.date.getDate()+', '+ post.date.getFullYear() }}
+                    {% else %}
+                        {{ post.date.getDate() +' de '+ config.months['pt-br'][post.date.getMonth()] +' de '+ post.date.getFullYear() }}
+                    {% endif %}
+                    </span>
+                    <h2>
+                        <a href="/{{ post.link }}" class="post-link">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+                    {{post.content}}
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% include "./partials/footer.html" %}
+</body>
+</html>
