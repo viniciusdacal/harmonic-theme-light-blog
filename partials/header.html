@@ -16,15 +16,18 @@
         </svg>
       </a>
       <div class="trigger">
-        <a class="page-link active" href="{% if page.lang == config.i18n.default %}/{% else %}/{{ page.lang }}{% endif %}">Home</a>
-        {% for page in pages %}
-          <a class="page-link" href="{{ page.link }}">{{ page.title }}</a>
+        <a class="page-link active" href="{% if page_item.lang == config.i18n.default %}/{% else %}/{{ page_item.lang }}{% endif %}">Home</a>
+        {% for page_item in pages %}
+          <a class="page-link" href="/{{ page_item.link }}">{{ page_item.title }}</a>
         {% endfor %}
       </div>
     </nav>
     <div class="language-menu">
     {% for flag in config.i18n.languages %}
-        <a href="{% if flag ==  config.i18n.default %}/ {% else %}/{{ flag }}{% endif %}">
+        <a
+          href="{% if flag ==  config.i18n.default %}/ {% else %}/{{ flag }}{% endif %}"
+          class="{% if page %} {% endif %}"
+          >
             {{ config.language_alias[flag] }}
         </a>
     {% endfor %}
